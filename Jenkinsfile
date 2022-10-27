@@ -1,19 +1,19 @@
 pipeline {
-    agent any
+    agent any 
     stages {
-        stage('Clean') {
+        stage('Clean') { 
             steps {
                 sh 'mvn clean'
             }
         }
-        stage('Validate') {
+        stage('Validate') { 
             steps {
                 sh 'mvn validate'
             }
         }
-        stage('Test') {
+        stage('Test') { 
             steps {
-                sh 'mvn test -DskipTests'
+                sh 'mvn -DskipTests'
             }
         }
     }
